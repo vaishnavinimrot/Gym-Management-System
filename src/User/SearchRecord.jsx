@@ -16,10 +16,10 @@ function SearchRecords() {
   };
 
   return (
-    <div>
-      <input type="text" placeholder="Search records" value={query} onChange={(e) => setQuery(e.target.value)} />
-      <button onClick={handleSearch}>Search</button>
-      <ul>
+    <div className="search-container">
+      <input  className="search-input" type="text" placeholder="Search records" value={query} onChange={(e) => setQuery(e.target.value)} />
+      <button className="search-button" onClick={handleSearch}>Search</button>
+      <ul className="results-list">
         {results.map((result) => (
           <li key={result.id}>{result.record}</li>
         ))}

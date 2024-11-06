@@ -1,5 +1,6 @@
 // src/components/MemberList.js
 import React, { useState } from "react";
+import "./memberlist.css";
 
 const initialMembers = [
   { id: 1, name: "John Doe", age: 25, membershipType: "Gold" },
@@ -15,14 +16,14 @@ function MemberList() {
   };
 
   return (
-    <div>
+    <div className="member-list-container">
       <h2>Member List</h2>
       {members.map((member) => (
-        <div key={member.id}>
+        <div key={member.id} className="member-item">
           <p>Name: {member.name}</p>
           <p>Age: {member.age}</p>
           <p>Membership Type: {member.membershipType}</p>
-          <button onClick={() => handleDeleteMember(member.id)}>Delete</button>
+          <button className="delete-button" onClick={() => handleDeleteMember(member.id)}>Delete</button>
         </div>
       ))}
     </div>

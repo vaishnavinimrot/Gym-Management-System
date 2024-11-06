@@ -1,26 +1,53 @@
-/* src/styles/App.css */
-.App {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  input {
-    margin: 10px 0;
-    padding: 8px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
+/* Login.css */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e9ecef;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-header {
+  font-size: 26px;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 25px;
+}
+
+.login-input {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px 15px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #c8cdd1;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-input:focus {
+  border-color: #495057;
+}
+
+.login-button {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}

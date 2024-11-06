@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./addmember.css";
 
 function AddMember() {
   const [member, setMember] = useState({ name: "", age: "", membershipType: "" });
@@ -15,7 +16,7 @@ function AddMember() {
   };
 
   return (
-    <div>
+    <div className="add-member-container">
       <h2>Add Member</h2>
       <input type="text" name="name" placeholder="Name" value={member.name} onChange={handleInputChange} />
       <input type="number" name="age" placeholder="Age" value={member.age} onChange={handleInputChange} />

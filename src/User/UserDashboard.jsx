@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import SearchRecords from "./SearchRecord";
+import "./userdashboard.css";
 
 function UserDashboard() {
   const [userDetails] = useState({
@@ -10,14 +11,14 @@ function UserDashboard() {
   });
 
   return (
-    <div>
+    <div className="container" >
       <h2>User Dashboard</h2>
       <h3>Your Details</h3>
       <p>Name: {userDetails.name}</p>
       <p>Membership Type: {userDetails.membershipType}</p>
       <p>Contact: {userDetails.contact}</p>
 
-      <h3>Search Records</h3>
+      <h3  className="search-section" >Search Records</h3>
       <SearchRecords />
     </div>
   );
