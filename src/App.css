@@ -1,53 +1,189 @@
-/* Login.css */
-
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #e9ecef;
-  padding: 20px;
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.login-header {
-  font-size: 26px;
-  font-weight: 600;
-  color: #0a0a0a;
-  margin-bottom: 25px;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  line-height: 1.5;
+  font-size: 14px;
+  display: flex; /* This makes the body a flex container */
+  flex-direction: column; /* Align items vertically */
+  height: 100vh;
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
 
-.login-input {
-  width: 100%;
-  max-width: 350px;
-  padding: 12px 15px;
-  margin: 10px 0;
-  font-size: 16px;
-  border: 1px solid #c8cdd1;
+/* Container for Content (The boxes) */
+.container {
+  justify-content: center;
+  text-align: center;
+  flex: 1; /* Distribute sections evenly */
+  padding: 15px; 
+  display: flex;
+  flex-direction: column;
+  margin: 1px;
+  background-color: white;
   border-radius: 6px;
-  outline: none;
-  transition: border-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.login-input:focus {
-  border-color: #495057;
+/* Make sure the boxes are displayed in a row under the navbar */
+.container-wrapper {
+  display: flex; /* Arrange containers in a row */
+  flex-wrap: wrap; /* Allow containers to wrap if needed */
+  justify-content: space-between; /* Distribute space between the containers */
+  padding: 20px; /* Add some padding around the boxes */
 }
 
-.login-button {
-  width: 100%;
-  max-width: 350px;
-  padding: 12px;
-  font-size: 18px;
-  color: #fff;
+/* Navigation Bar */
+nav {
+  background-color: #007bff;
+  padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 10px;
+  padding: 10px 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(239, 234, 234);
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #000000;
+}
+
+/* Buttons */
+.button {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 20%;
+  padding: 8px 10px;
+  margin: 16px auto;
+  color: white;
   background-color: #007bff;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
   cursor: pointer;
-  margin-top: 15px;
   transition: background-color 0.3s;
 }
 
-.login-button:hover {
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin: 15px 0; /* Reduced margin */
+  color: #007bff;
+  font-size: 20px; /* Reduced font size */
+}
+
+/* Form Styling */
+form {
+  max-width: 350px; /* Reduced max-width */
+  margin: 20px auto; /* Reduced margin */
+  background: white;
+  padding: 15px; /* Reduced padding */
+  border-radius: 6px; /* Reduced border-radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form button,
+form select {
+  width: 100%;
+  padding: 8px; /* Reduced padding */
+  margin: 8px 0; /* Reduced margin */
+  border: 1px solid #ddd;
+  border-radius: 4px; /* Reduced border-radius */
+  font-size: 14px; /* Reduced font size */
+}
+
+form input:focus,
+form select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  padding: 8px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
+}
+
+form button:hover {
   background-color: #0056b3;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0; /* Reduced margin */
+  background: white;
+  border-radius: 6px; /* Reduced border-radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  padding: 10px; /* Reduced padding */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px; /* Reduced font size */
+}
+
+table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Buttons */
+
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 8px; /* Reduced padding */
+  background-color: #007bff;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 12px; /* Reduced font size */
 }

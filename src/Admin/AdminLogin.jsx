@@ -1,14 +1,14 @@
 import React from "react";
 
-const MemberLogin = () => {
+const AdminLogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Member Login Successful");
+    alert("Admin Login");
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Member Login</h2>
+      <h2>Admin Login</h2>
       <input type="text" placeholder="Username" required />
       <input type="password" placeholder="Password" required />
       <button type="submit">Login</button>
@@ -16,4 +16,4 @@ const MemberLogin = () => {
   );
 };
 
-export default MemberLogin;
+export default AdminLogin;

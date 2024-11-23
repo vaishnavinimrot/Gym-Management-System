@@ -1,0 +1,11 @@
+/* Home Page Image Section */
+.home-image {
+    width: 100%;
+    max-width: 600px; /* Controls the max width of the image */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    display: block;
+    margin: 20px auto; /* Center the image horizontally */
+  }
+  
