@@ -7,7 +7,9 @@ const MemberLogin = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}
+    style={{ marginTop: "8%", textAlign: "center" }}
+    >
       <h2>Member Login</h2>
       <input type="text" placeholder="Username" required />
       <input type="password" placeholder="Password" required />

@@ -23,33 +23,14 @@ import ViewBillNotifications from "./Member/ViewBillNotification";
 import UserLogin from "./User/UserLogin";
 import ViewDetails from "./User/ViewDetails";
 import SearchRecords from "./User/SearchRecord";
-
+import Navbar from "./Navbar";
+import Sidebar from "./SideBar";
 const App = () => {
   return (
     <Router>
-      <div>
-        {/* Navigation Menu */}
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/admin/login">Admin Login</Link></li>
-            <li><Link to="/admin/add-member">Add Member</Link></li>
-            <li><Link to="/admin/manage-members">Manage Members</Link></li>
-            <li><Link to="/admin/create-bills">Create Bills</Link></li>
-            <li><Link to="/admin/assign-fee-package">Assign Fee Package</Link></li>
-            <li><Link to="/admin/assign-notifications">Assign Notifications</Link></li>
-            <li><Link to="/admin/export-report">Export Report</Link></li>
-            <li><Link to="/admin/supplement-store">Supplement Store</Link></li>
-            <li><Link to="/admin/diet-details">Diet Details</Link></li>
-            <li><Link to="/member/login">Member Login</Link></li>
-            <li><Link to="/member/view-bill-receipts">View Bill Receipts</Link></li>
-            <li><Link to="/member/view-bill-notifications">View Bill Notifications</Link></li>
-            <li><Link to="/user/login">User Login</Link></li>
-            <li><Link to="/user/view-details">View Details</Link></li>
-            <li><Link to="/user/search-records">Search Records</Link></li>
-          </ul>
-        </nav>
-
+      <Navbar />
+      <Sidebar />
+       
         {/* Routes */}
         <Routes>
         <Route path="/" element={<HomePage />} />
@@ -71,7 +52,7 @@ const App = () => {
           <Route path="/user/view-details" element={<ViewDetails />} />
           <Route path="/user/search-records" element={<SearchRecords />} />
         </Routes>
-      </div>
+      
     </Router>
   );
 };

@@ -6,6 +6,7 @@
 }
 
 body {
+  margin-top: 2%;
   font-family: 'Arial', sans-serif;
   background-color: #f3f4f6;
   color: #333;
@@ -17,8 +18,10 @@ body {
   overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
 
+
 /* Container for Content (The boxes) */
 .container {
+  
   justify-content: center;
   text-align: center;
   flex: 1; /* Distribute sections evenly */
@@ -31,6 +34,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Make sure the boxes are displayed in a row under the navbar */
 .container-wrapper {
   display: flex; /* Arrange containers in a row */
@@ -39,36 +43,6 @@ body {
   padding: 20px; /* Add some padding around the boxes */
 }
 
-/* Navigation Bar */
-nav {
-  background-color: #007bff;
-  padding: 5px 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0 10px;
-  padding: 10px 5px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: rgb(239, 234, 234);
-  font-size: 14px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #000000;
-}
 
 /* Buttons */
 .button {
@@ -79,7 +53,7 @@ nav ul li a:hover {
   padding: 8px 10px;
   margin: 16px auto;
   color: white;
-  background-color: #007bff;
+  background-color: #412a54;
   border: none;
   border-radius: 4px;
   text-decoration: none;
@@ -93,7 +67,7 @@ nav ul li a:hover {
 h2 {
   text-align: center;
   margin: 15px 0; /* Reduced margin */
-  color: #007bff;
+  color: #0a0a0a;
   font-size: 20px; /* Reduced font size */
 }
 
@@ -176,14 +150,188 @@ table tr:hover {
 }
 
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 8px; /* Reduced padding */
-  background-color: #007bff;
-  color: white;
+
+/* Sidebar Styling */
+.sidebar {
   position: fixed;
+  top: 0;
+  left: -250px; /* Initially hide the sidebar off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: left 0.3s ease;
+  padding-top: 20px;
+  z-index: 1000;
+}
+
+/* Sidebar Open */
+.sidebar.open {
+  left: 0; /* Open the sidebar */
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center; /* Align icon and text */
+  color: #ddd;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.sidebar a:hover {
+  background-color: #412a54;
+  color: white;
+}
+
+/* Toggle Button Styling */
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 5px;
+  background-color: #412a54;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.sidebar-toggle:hover {
+  background-color: #412a54;
+}
+
+/* Content Styling */
+.content {
+  margin-left: 0;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.content.sidebar-open {
+  margin-left: 250px; /* Shift content when sidebar is open */
+}
+
+/* Add some space for your content */
+.content h2 {
+  color: #333;
+}
+
+.content p {
+  color: #555;
+}
+
+/* Icon Styling */
+.sidebar a i {
+  font-size: 1.2rem; /* Increase icon size */
+}
+
+/* Sidebar links */
+.sidebar a {
+  font-size: 1rem;
+  color: #fff;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #585757;
+  color: white;
+}
+
+.sidebar a i {
+  margin-right: 15px;
+}
+
+/* Active Link Style */
+.sidebar a.active {
+  background-color: #412a54;
+}
+
+/* Sidebar on Mobile */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar a {
+    padding: 10px 15px;
+  }
+}
+
+/* Navbar Styling */
+.navbar {
+  border-radius: 1%;
+  background-color: #412a54;
+  padding: 20px 0;
+  color: white;
   width: 100%;
-  bottom: 0;
-  font-size: 12px; /* Reduced font size */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffdd40;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Add space between icon and text */
+}
+
+.nav-links li a i {
+  font-size: 20px; /* Icon size */
 }
