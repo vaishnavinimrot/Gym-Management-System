@@ -13,7 +13,7 @@ const AddMember = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ marginTop: "8%", textAlign: "center" }}>
       <h2>Add Member</h2>
       <input
         type="text"

@@ -4,10 +4,10 @@ const ManageMembers = () => {
   const [members, setMembers] = useState([
     { id: 1, name: "ditto diana" },
     { id: 2, name: "neha singh" },
-    { id: 2, name: "vehan bhatia" },
-    { id: 2, name: "suhana khan" },
-    { id: 2, name: "zoya sheaik" },
-    { id: 2, name: "nia sharma" },
+    { id: 3, name: "vehan bhatia" },
+    { id: 4, name: "suhana khan" },
+    { id: 5, name: "zoya sheaik" },
+    { id: 6, name: "nia sharma" },
 
   ]);
 
